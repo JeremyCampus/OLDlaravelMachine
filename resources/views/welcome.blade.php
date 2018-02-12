@@ -9,7 +9,7 @@
 
 
 @section('content')
-
+  <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-tower"></span> MODIFY</a>
   <div class="container text-left tis_Container">
     <div class="row marge_Top">
       <div class="col-md-5 bg-2 col-md-offset-0 fixed-bottom">
