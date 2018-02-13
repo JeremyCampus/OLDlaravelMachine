@@ -76,7 +76,7 @@ class BoissonController extends Controller
         $data = [
             'drink'=> $drink
         ];
-        return view("Drinks.mesIngredients", ["data" => $data]);
+        return view("drinks.mesIngredients", ["data" => $data]);
 
     }
     /**
