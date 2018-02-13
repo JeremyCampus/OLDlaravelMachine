@@ -183,8 +183,9 @@ $( ".sucres" ).click(function() {
 //Récupérer uniquement les chiffres de l'id (pour connaitre le nombre de sucre)
     let monId = $( this ).attr( 'id' ).replace(/[^0-9]/gi, '');
     sucre = parseInt(monId, 10);
-    var sucrePHP = document.getElementById("sucrePourPHP");
-    sucrePHP.setAttribute("value", sucre);
+    // var sucrePHP = document.getElementById("sucrePourPHP");
+    // console.log(sucrePHP);
+    // sucrePHP.setAttribute("value", sucre);
 
 //-------------------------------------------------------------------------------
     addSugar(sucre);

@@ -16,9 +16,9 @@ class BoissonController extends Controller
      */
     public function index()
     {
-        $boissons = DB::select('SELECT * FROM drinks');
+        $boissons = Drink::all();
 
-        return view('welcome', ["boissons" => $boissons]);
+        return view('welcome', ["boissons_in_blade" => $boissons]);
         // return view('welcome', []);
     }
 
@@ -34,9 +34,9 @@ class BoissonController extends Controller
 
     public function lookMe($id)
     {
-        $maBoisson = DB::select("SELECT * FROM drinks WHERE code = '$id'");
+        $maBoisson = Drink::find($id);
 
-        return view('mesIngredients', ["maBoisson" => $maBoisson]);
+        return view('Drinks.mesIngredients', ["maBoisson" => $maBoisson]);
     }
 
     public function allListed()
@@ -70,8 +70,13 @@ class BoissonController extends Controller
      * @param  \App\Boisson  $boisson
      * @return \Illuminate\Http\Response
      */
-    public function show(Boisson $id)
+    public function show($id)
     {
+        $drink = Drink::find($id);
+        $data = [
+            'drink'=> $drink
+        ];
+        return view("Drinks.mesIngredients", ["data" => $data]);
 
     }
     /**
@@ -103,8 +108,8 @@ class BoissonController extends Controller
      * @param  \App\Boisson  $boisson
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Boisson $boisson)
+    public function destroy(Drink $boisson)
     {
-        //
+        $maBoisson = app\Drink::destroy($boisson);
     }
 }

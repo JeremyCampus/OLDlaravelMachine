@@ -1,0 +1,399 @@
+
+html, body {
+    background-color: #fff;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+    background-image: url("../images/flou.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.title {
+    font-size: 84px;
+    color: white;
+    font-weight: 300;
+
+}
+
+.links > a {
+    color: #FFF;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.marge_Top{
+    margin-top: 40px;
+}
+/*---------------------------MACHINE----------------------------*/
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer {
+    background-color: #fff;
+    padding: 25px;
+    font-size: 150%;
+}
+
+.intro {
+    font-size: 150%;
+    color: red;
+}
+.row {
+    position: relative;
+}
+
+#maBoisson{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#maBoisson img {
+    vertical-align:bottom;
+    border:0;
+    cursor: pointer;
+}
+
+#imgTouillette
+{
+    cursor: pointer;
+}
+#monGobelet{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+#monGobelet img {
+    vertical-align:bottom;
+    border:0;
+}
+
+
+
+.choix{
+    /* float: left; */
+    background-color: #2a7ad6;
+    width: 21em;
+    height: 7em;
+    text-align: center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: white;
+    border: 8px solid rgba(39, 42, 221, 0);
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+
+
+#renduMonnaie{
+    margin: auto;
+    display: block;
+    color: black;
+}
+
+a{
+    cursor: pointer;
+    color:white;
+}
+
+h3{
+    font-size: 2em;
+    padding-top: 0;
+    margin-top: 0.5em;
+}
+
+.selected{
+    border: 8px solid rgb(1, 97, 206);
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 1) inset;
+}
+
+.imgBoisson{
+    display:none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.visible{
+    display:block;
+}
+
+.sucres{
+    float: left;
+    cursor: pointer;
+}
+
+
+#zoneSucres{
+    width: 15%;
+    position: absolute;
+    bottom: 10%;
+    right: 4%;
+    margin-bottom: 1%;
+    opacity: 0.8;
+}
+.sucresBoisson{
+    width: 30%;
+    float: left;
+}
+
+.pieces{
+    width: 4.5em;
+    float: left;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+
+.mesPieces{
+    background-color: #2a7ad6;
+    height: 6.5em;
+    text-align: center;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.80);
+    -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.80);
+    box-shadow: 3px 3px 3x 0px rgba(0,0,0,0.65);
+    color: white;
+    border: 8px solid rgba(39, 42, 221, 0);
+    margin-top: 1em;
+}
+
+#pieceE{
+    margin-top: -1.4em;
+}
+
+.pMonnayeur{
+    background-color: #2a7ad6;
+    width: 19em;
+    height: 6em;
+    text-align: center;
+    -webkit-border-top-left-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius-topleft: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;-webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: white;
+    border: 8px solid rgba(39, 42, 221, 0);
+    margin-top: 1em;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.monnayeur h3{
+    color: white;
+}
+
+.nbPieces{
+    background-color: white;
+    width: 10em;
+    height: 4.9em;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.plusMoins{
+    width: 2.5em;
+    height: 4.9em;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: black;
+    position: absolute;
+    right: 10.5em;
+    top: 0;
+}
+
+
+
+
+.plus{
+    width: 2.5em;
+    height: 2.40em;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+.moins{
+    width: 2.5em;
+    height: 2.40em;
+    text-align: center;
+    -webkit-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    box-shadow: 3px 3px 11px -1px rgba(0,0,0,0.65);
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+
+}
+
+#eau {
+    position : absolute;
+    margin-top: 150px;
+    margin-left : 250px;
+
+}
+
+#gobs {
+    position : absolute;
+    margin-top: -40px;
+    margin-left : 208px;
+
+}
+
+#lait {
+    position : absolute;
+    margin-top: 50px;
+    margin-left : 95px;
+
+}
+
+#chocolat {
+    position : absolute;
+    margin-top: 50px;
+    margin-left : 95px;
+
+}
+
+#the {
+    position : absolute;
+    margin-top: 50px;
+    margin-left : 105px;
+
+}
+
+
+#cafe {
+    position : absolute;
+    margin-top: 50px;
+    margin-left : 105px;
+
+}
+
+#sucre {
+    position : absolute;
+    margin-top: 80px;
+    margin-left : 400px;
+
+}
+table.greyGridTable {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width: 100%;
+    text-align: center;
+    background: #FFFFFF;
+    color:black;
+}
+table.greyGridTable td, table.greyGridTable th {
+    border: 1px solid #000000;
+    padding: 3px 4px;
+}
+table.greyGridTable tbody td {
+    font-size: 13px;
+}
+table.greyGridTable thead {
+    background: #FFFFFF;
+    border-bottom: 2px solid #333333;
+}
+table.greyGridTable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    border-left: 2px solid #333333;
+}
+table.greyGridTable thead th:first-child {
+    border-left: none;
+}
+
+table.greyGridTable tfoot {
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    border-top: 2px solid #333333;
+}
+table.greyGridTable tfoot td {
+    font-size: 14px;
+}
+
+
+table img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.ingr{
+    float: left;
+    margin-left: 16px;
+}

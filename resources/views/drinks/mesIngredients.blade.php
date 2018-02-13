@@ -2,14 +2,15 @@
 
 
 @section('titre')
-  Les ingredient
+  Les ingredients
 @endsection
 
 
 
 @section('content')
   <h3>Ma boisson :</h3>
-  @foreach ($maBoisson as $key)
+
+  @foreach ($data as $key)
     <h3>{{$key->label}}<h3>
     <h3>{{$key->price}}<h3>
 

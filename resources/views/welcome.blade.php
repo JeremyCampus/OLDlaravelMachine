@@ -9,10 +9,11 @@
 
 
 @section('content')
-  <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-tower"></span> MODIFY</a>
+
+
   <div class="container text-left tis_Container">
     <div class="row marge_Top">
-      <div class="col-md-5 bg-2 col-md-offset-0 fixed-bottom">
+      <div class="col-md-4 bg-2 col-md-offset-0 fixed-bottom">
         <img id="sucre0" class="img-responsive sucres" src="images/sucreCroix.png">
         <img id="sucre1" class="img-responsive sucres" src="images/monSucre.png">
         <img id="sucre2" class="img-responsive sucres" src="images/monSucre.png">
@@ -34,13 +35,13 @@
   <div class="container text-left tis_Container">
     <div class="row">
       <div class="col-md-7">
-        @foreach ($boissons as $boisson)
+        @foreach ($boissons_in_blade as $boisson)
               <?php $text=str_replace(' ','', $boisson->code); ?>
 
           {{-- <div id="{{$text}}" href="{{$boisson->PRIX}}" class="choix"> --}}
 
 
-              <div class="choix"><a href="boisson/{{$boisson->code}}">
+              <div class="choix"><a href="boisson/{{$boisson->id}}">
             <h3>{{$boisson->label}}</h3><h4> {{$boisson->price/100}}</h4>
                 </a></div>
           {{-- </div> --}}
@@ -62,7 +63,7 @@
   <!-- Pieces -->
   <div class="container text-left tis_Container">
     <div class="row">
-      <div class="col-md-7 bg-2 col-md-offset-4 fixed-bottom mesPieces">
+      <div class="col-md-4 bg-2 col-md-offset-4 fixed-bottom mesPieces">
         <img id="piece2" class="img-responsive pieces" src="images/pieces/2.png"/>
         <img id="piece1" class="img-responsive pieces" src="images/pieces/1.png"/>
         <img id="piece50" class="img-responsive pieces" src="images/pieces/50ct.png"/>

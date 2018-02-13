@@ -19,7 +19,9 @@ Route::get('/', 'BoissonController@index')->name('home');
 
 Route::post('/', 'monControleur@list')->name('requete');
 
-Route::get('/boisson/{id}', 'BoissonController@lookMe');
+Route::get('/boisson/{id}', 'BoissonController@show');
+
+//Route::get('/boissons/{id}', 'BoissonController@destroy')->name("deleteBoisson");
 
 Route::post('/boisson/store', 'BoissonController@store');
 
