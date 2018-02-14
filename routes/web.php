@@ -19,11 +19,15 @@ Route::get('/', 'BoissonController@index')->name('home');
 
 Route::post('/', 'monControleur@list')->name('requete');
 
+//________BOISSONS__________
+
 Route::get('/boisson/{id}', 'BoissonController@show');
 
 Route::put('/boisson/{id}', 'BoissonController@update');
 
 Route::get('/deleteBoisson/{id}', 'BoissonController@destroy')->name("deleteBoisson");
+
+Route::get('/boiss', 'BoissonController@create')->name("createBoisson");
 
 Route::post('/boisson/store', 'BoissonController@store');
 
@@ -31,9 +35,10 @@ Route::get('/boisson/{id}/edit','BoissonController@edit');
 
 Route::get('/boissons/liste', 'BoissonController@allListed')->name("boissons");
 
-Route::get('/boiss', 'BoissonController@create')->name("createBoisson");
-
+//________INGREDIENTS__________
 Route::get('/ing', 'monControleur@ingredients')->name("ingredients");
+
+
 
 Route::get('/rec', 'monControleur@recettes')->name("recettes");
 

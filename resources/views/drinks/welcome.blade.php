@@ -37,7 +37,7 @@
       <div class="col-md-7">
         @foreach ($boissons as $boisson)
               <div class="choix"><a href="boisson/{{$boisson->id}}">
-            <h3>{{$boisson->label}}</h3><h4> {{$boisson->price/100}}</h4>
+            <h3>{{$boisson->label}}</h3><h4> {{$boisson->price/100}} €</h4>
                 </a></div>
           {{-- </div> --}}
         @endforeach

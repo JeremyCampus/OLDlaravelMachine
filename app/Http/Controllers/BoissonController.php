@@ -32,12 +32,7 @@ class BoissonController extends Controller
         return view('post.creation');
     }
 
-    public function lookMe($id)
-    {
-        $maBoisson = Drink::find($id);
 
-        return view('drinks.mesIngredients', ["maBoisson" => $maBoisson]);
-    }
 
     public function allListed()
     {
@@ -76,7 +71,7 @@ class BoissonController extends Controller
         $data = [
             'drink'=> $drink
         ];
-        return view("drinks.mesIngredients", $data);
+        return view("drinks.details", $data);
 
     }
     /**
