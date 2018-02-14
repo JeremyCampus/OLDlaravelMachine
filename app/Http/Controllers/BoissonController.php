@@ -18,7 +18,7 @@ class BoissonController extends Controller
     {
         $boissons = Drink::all();
 
-        return view('welcome', ["boissons_in_blade" => $boissons]);
+        return view('drinks.welcome', ["boissons" => $boissons]);
         // return view('welcome', []);
     }
 
@@ -29,21 +29,21 @@ class BoissonController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        return view('post.creation');
     }
 
     public function lookMe($id)
     {
         $maBoisson = Drink::find($id);
 
-        return view('Drinks.mesIngredients', ["maBoisson" => $maBoisson]);
+        return view('drinks.mesIngredients', ["maBoisson" => $maBoisson]);
     }
 
     public function allListed()
     {
-        $maBoisson = DB::select("SELECT * FROM drinks");
+        $mesBoissons = Drink::all();
 
-        return view('mesBoissons', ["maBoisson" => $maBoisson]);
+        return view('drinks.mesBoissons', ["mesBoissons" => $mesBoissons]);
     }
 
     /**
@@ -55,13 +55,13 @@ class BoissonController extends Controller
     public function store(Request $request)
     {
         $drinks = new Drink;
-        $drinks ->code =  $request->code;
-        $drinks ->label = $request->nom;
-        $drinks ->price = $request->prix;
+        $drinks->code =  $request->code;
+        $drinks->label = $request->nom;
+        $drinks->price = $request->prix;
         $drinks-> save();
-        $boissons = DB::select('SELECT * FROM drinks');
+        $mesBoissons = Drink::all();
 
-        return view('welcome', ["boissons" => $boissons]);
+        return view('drinks.mesBoissons', ["mesBoissons" => $mesBoissons]);
 
     }
     /**
@@ -76,7 +76,7 @@ class BoissonController extends Controller
         $data = [
             'drink'=> $drink
         ];
-        return view("drinks.mesIngredients", ["data" => $data]);
+        return view("drinks.mesIngredients", $data);
 
     }
     /**
@@ -85,9 +85,14 @@ class BoissonController extends Controller
      * @param  \App\Boisson  $boisson
      * @return \Illuminate\Http\Response
      */
-    public function edit(Boisson $boisson)
+    public function edit($id)
     {
-        //
+        $drink = Drink::find($id);
+        $data = [
+            'drink' => $drink,
+        ];
+
+        return view('drinks.edit', $data);
     }
 
     /**
@@ -97,10 +102,18 @@ class BoissonController extends Controller
      * @param  \App\Boisson  $boisson
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Boisson $boisson)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $drink = Drink::find($id);
+
+        $drink -> label = $request->DrinkName;
+        $drink -> code = $request-> Code;
+        $drink -> price = $request->DrinkPrice;
+        $drink ->save();
+
+        $mesBoissons = Drink::all();
+
+        return view('drinks.mesBoissons', ["mesBoissons" => $mesBoissons]);    }
 
     /**
      * Remove the specified resource from storage.
@@ -108,8 +121,13 @@ class BoissonController extends Controller
      * @param  \App\Boisson  $boisson
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Drink $boisson)
+    public function destroy($boisson)
     {
-        $maBoisson = app\Drink::destroy($boisson);
+        $detruit = Drink::destroy($boisson);
+        $maBoisson = DB::select("SELECT * FROM drinks");
+
+        $mesBoissons = Drink::all();
+        return view('drinks.mesBoissons', ["mesBoissons" => $mesBoissons]);
     }
+
 }

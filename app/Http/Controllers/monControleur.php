@@ -21,7 +21,7 @@ class monControleur extends Controller
 
     public function boissons()
     {
-        return view('boissons');
+        return view('drinks/boissons');
     }
   public function recettes()
   {

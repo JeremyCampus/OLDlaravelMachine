@@ -35,12 +35,7 @@
   <div class="container text-left tis_Container">
     <div class="row">
       <div class="col-md-7">
-        @foreach ($boissons_in_blade as $boisson)
-              <?php $text=str_replace(' ','', $boisson->code); ?>
-
-          {{-- <div id="{{$text}}" href="{{$boisson->PRIX}}" class="choix"> --}}
-
-
+        @foreach ($boissons as $boisson)
               <div class="choix"><a href="boisson/{{$boisson->id}}">
             <h3>{{$boisson->label}}</h3><h4> {{$boisson->price/100}}</h4>
                 </a></div>

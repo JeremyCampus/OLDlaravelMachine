@@ -24,13 +24,13 @@
                     </thead>
                     <tbody>
 
-                    @foreach ($maBoisson as $key)
+                    @foreach ($mesBoissons as $key)
                         <tr>
                             <td><h3></h>{{$key->label}}</h3></td>
                             <td><h3>{{$key->price}}</h3></td>
                             <td><img src="/images/{{$key->code}}.png" alt="{{$key->code}}" style="width:150px;"/></td>
-                            <td><a href="#" class="btn btn-info"><span class="glyphicon glyphicon-tower"></span> MODIFY</a></td>
-                            <td><a href="{{  route('deleteBoisson') }}" class="btn btn-danger"><span class="glyphicon glyphicon-eye-close"></span> DELETE</a></td>
+                            <td><a href="/boisson/{{$key->id}}/edit" class="btn btn-info"><span class="glyphicon glyphicon-tower"></span> MODIFY</a></td>
+                            <td><a href="/deleteBoisson/{{$key->id}}" class="btn btn-danger"><span class="glyphicon glyphicon-eye-close"></span> DELETE</a></td>
                         </tr>
                     @endforeach
 

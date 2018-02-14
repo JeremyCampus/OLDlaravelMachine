@@ -21,13 +21,17 @@ Route::post('/', 'monControleur@list')->name('requete');
 
 Route::get('/boisson/{id}', 'BoissonController@show');
 
-//Route::get('/boissons/{id}', 'BoissonController@destroy')->name("deleteBoisson");
+Route::put('/boisson/{id}', 'BoissonController@update');
+
+Route::get('/deleteBoisson/{id}', 'BoissonController@destroy')->name("deleteBoisson");
 
 Route::post('/boisson/store', 'BoissonController@store');
 
-Route::get('/boissons/tousListe', 'BoissonController@allListed')->name("createBoisson");
+Route::get('/boisson/{id}/edit','BoissonController@edit');
 
-Route::get('/boiss', 'monControleur@boissons')->name("boissons");
+Route::get('/boissons/liste', 'BoissonController@allListed')->name("boissons");
+
+Route::get('/boiss', 'BoissonController@create')->name("createBoisson");
 
 Route::get('/ing', 'monControleur@ingredients')->name("ingredients");
 
