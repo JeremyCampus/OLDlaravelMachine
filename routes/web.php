@@ -36,7 +36,7 @@ Route::get('/boisson/{id}/edit','BoissonController@edit');
 Route::get('/boissons/liste', 'BoissonController@allListed')->name("boissons");
 
 //________INGREDIENTS__________
-Route::get('/ing', 'monControleur@ingredients')->name("ingredients");
+Route::get('/ing', 'BoissonController@ingredients')->name("ingredients");
 
 
 
